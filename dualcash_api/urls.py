@@ -7,5 +7,5 @@ router.register(r'categories', views.CategoryView, basename='categories')
 router.register(r'transactions', views.TransactionView, basename='transactions')
 
 urlpatterns = [
-    path('dualcash/model', include(router.urls))
+    path('dualcash/model/', include(router.urls))
 ]
