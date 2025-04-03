@@ -77,8 +77,15 @@ WSGI_APPLICATION = 'dualcash_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'auth',  # Reemplázalo con el nombre de tu BD
+        'USER': 'root',         # Usuario de MySQL
+        'PASSWORD': '1234',  # Contraseña de MySQL
+        'HOST': 'localhost',          # O la IP del servidor de MySQL
+        'PORT': '3306',               # Puerto de MySQL
+        'OPTIONS': {
+            'charset': 'utf8mb4',  # Soporte para emojis y caracteres especiales
+        }
     }
 }
 
